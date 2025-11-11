@@ -1,0 +1,133 @@
+# Fathom Automation - Git Ignore File
+
+# =============================================================================
+# SECURITY: API Keys & Credentials
+# =============================================================================
+
+# Environment variables with actual credentials
+.env
+.env.local
+.env.production
+config/.env
+
+# Filled-in configuration files (keep templates only)
+config/connections.json
+config/database-ids.json
+
+# =============================================================================
+# MAKE.COM SCENARIOS
+# =============================================================================
+
+# Working drafts and temporary exports
+make-scenarios/*-draft.json
+make-scenarios/*-temp.json
+make-scenarios/*-backup-*.json
+make-scenarios/*-test-*.json
+
+# Scenarios with credentials (keep only sanitized exports)
+make-scenarios/*-private.json
+
+# =============================================================================
+# LOGS & EXECUTION DATA
+# =============================================================================
+
+# Execution logs that may contain sensitive call data
+execution-logs/
+logs/
+*.log
+
+# Test data with real client information
+test-data/real-*.json
+test-data/production-*.json
+
+# =============================================================================
+# NOTION EXPORTS (may contain sensitive data)
+# =============================================================================
+
+# Notion database exports
+notion-exports/
+*.csv
+*-notion-export/
+
+# =============================================================================
+# OPERATING SYSTEM FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# =============================================================================
+# EDITOR & IDE FILES
+# =============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# =============================================================================
+# TEMPORARY FILES
+# =============================================================================
+
+# General temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Node modules (if adding any JavaScript tooling)
+node_modules/
+
+# Python (if adding any Python scripts)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# =============================================================================
+# DOCUMENTATION DRAFTS
+# =============================================================================
+
+# Keep only final documentation
+docs/*-draft.md
+docs/*-wip.md
+*-scratch.md
+*-notes.md
+
+# =============================================================================
+# ALLOW THESE FILES (explicit overrides)
+# =============================================================================
+
+# Keep configuration templates
+!config/.env.example
+!config/*-template.json
+
+# Keep versioned scenario exports
+!make-scenarios/fathom-content-intelligence-v*.json
+!make-scenarios/*-template.json
