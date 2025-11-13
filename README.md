@@ -49,7 +49,8 @@ Notion Databases
 │   ├── 02-makecom-workflow-guide.md  # Complete Make.com scenario setup
 │   ├── 03-openrouter-setup.md        # API key setup & model selection
 │   ├── 04-testing-protocol.md        # Testing & troubleshooting
-│   └── 05-dashboard-views.md         # Notion dashboard configuration
+│   ├── 05-dashboard-views.md         # Notion dashboard configuration
+│   └── 06-troubleshooting-common-errors.md  # Error resolution guide
 ├── config/
 │   ├── .env.example                  # Environment variables template
 │   └── openrouter-prompts.md         # All AI prompts with versioning
@@ -153,22 +154,27 @@ Notion Databases
 
 ### Common Issues
 
-1. **Make.com scenario not triggering**
+1. **Notion date range errors**
+   - Error: "[400] invalid date range, start date must be before end date"
+   - Fix: Change date properties from date range to single date in Notion
+   - See: `docs/06-troubleshooting-common-errors.md` for detailed solution
+
+2. **Make.com scenario not triggering**
    - Check Fathom API connection
    - Verify webhook is active
    - Check operation limit
 
-2. **OpenRouter API errors**
+3. **OpenRouter API errors**
    - Verify API key in headers
    - Check credit balance
    - Confirm model availability
 
-3. **Notion creation failures**
+4. **Notion creation failures**
    - Verify integration has access to databases
    - Check property name matches exactly
    - Confirm relation fields use database IDs
 
-See `docs/04-testing-protocol.md` for detailed troubleshooting.
+**Full error reference:** See `docs/06-troubleshooting-common-errors.md` for comprehensive solutions to all common errors.
 
 ## Roadmap
 
